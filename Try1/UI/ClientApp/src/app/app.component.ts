@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ChatAdapter } from 'ng-chat';
+import { TestAdapter } from './test-adapter';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  userId=99;
+  public adapter: ChatAdapter = new TestAdapter() ;
+  
+
 }
